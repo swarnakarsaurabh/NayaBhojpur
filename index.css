@@ -1,0 +1,336 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: auto; /* Remove default margin and padding and hide overflow */
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(to left, white, red);
+  background-size: 200% 100%;
+  animation: gradientTransition 5s linear infinite;
+}
+
+@keyframes gradientTransition {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+.container:hover {
+  background: linear-gradient(to right, white, red );
+  
+  
+  
+}
+
+/* Common styles for the navbar */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+}
+
+li {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #aaffaa;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  a {
+    font-size: 14px; /* Adjust the font size for smaller screens */
+  }
+}
+
+
+/*header */
+
+header {
+  border: 2px solid black;
+}
+
+.site-header {
+  text-align: center;
+  
+  background-size: cover;
+  background-position: center;
+  color: transparent; /* Set text color to transparent */
+  padding: 100px 0; /* Adjust the padding as needed */
+  font-weight: bold;
+  position: relative;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 10vw; /* Adjust the font size as needed */
+  background-image: url('./resources/cliptext.jpg'); /* Replace with the actual path to your village image */
+  background-clip: text; /* Clip the text to the background */
+  -webkit-background-clip: text; /* For some older browsers */
+  color: transparent; /* Set text color to transparent */
+}
+
+
+
+
+/* ABOUT */
+.About {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 50px; /* Adjust the padding as needed */
+}
+
+.glass-plate {
+  background-color: rgba(255, 255, 255, 0.6); /* Increase the transparency (0.6 is just an example) */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.About {
+  position: relative;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4));
+  backdrop-filter: blur(10px);
+  padding: 50px;
+}
+
+.glass-plate {
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.6));
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.glass-plate:before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+  background: inherit;
+  border-radius: inherit;
+  z-index: -1;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.About {
+  position: relative;
+  background: linear-gradient(45deg, white, red);
+  backdrop-filter: blur(10px);
+  padding: 50px;
+  color: #fff; /* Default text color */
+  transition: background-color 0.5s ease; /* Add a smooth transition effect */
+}
+
+.glass-plate {
+  background: inherit;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.glass-plate:before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+  background: inherit;
+  border-radius: inherit;
+  z-index: -1;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  color: #000000; /* Text color */
+  font-size: 24px; /* Adjust the font size as needed */
+}
+
+p {
+  color: #333333; /* Text color */
+  font-size: 16px; /* Adjust the font size as needed */
+}
+
+
+/* Position the image container (needed to position the left and right arrows) */
+/* GALLERY */
+
+.box-gallery {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+.services-section {
+  padding: 50px;
+  margin-top: 10vh;
+  background-color: #f4f4f4;
+  background: linear-gradient(45deg, #000000, #8B0000);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh; /* Set a minimum height to center the content vertically */
+  /* border: 2PX solid blue; */
+
+}
+.services-section h2 {
+      font-weight: bold;
+      color: black;
+      font-size: 3rem;
+}
+
+.service-item {
+  margin-bottom: 20px;
+  text-align: center; /* Center text within each service item */
+  /* border: 2PX solid blue; */
+}
+
+.service-link {
+  display: block;
+  font-size: 18px;
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* .service-description {
+  font-size: 16px;
+  color: #555555;
+} */
+footer {
+      background-color: #8B0000; /* Blackish-red background color for the footer */
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .contact-links {
+      margin-top: 20px;
+    }
+
+    .contact-links a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
