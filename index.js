@@ -1,58 +1,75 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const aboutSection = document.getElementById("aboutSection");
+  const aboutSection = document.getElementById("aboutSection");
 
-    // Function to calculate the luminance of a color
-    function calculateLuminance(color) {
-      const rgb = color.match(/\d+/g).map(Number);
-      return 0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2];
-    }
-
-    // Function to set the text color based on background luminance
-    function setTextColor() {
-      const bgColor = window.getComputedStyle(aboutSection).backgroundColor;
-      const luminance = calculateLuminance(bgColor);
-
-      // Choose a contrasting text color
-      const textColor = luminance > 128 ? "#000" : "#fff";
-
-      aboutSection.style.color = textColor;
-    }
-
-    // Initial call to set text color
-    setTextColor();
-
-    // Update text color when the window is resized (optional)
-    window.addEventListener("resize", setTextColor);
-  });
-
-
-  let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  // Function to calculate the luminance of a color
+  function calculateLuminance(color) {
+    const rgb = color.match(/\d+/g).map(Number);
+    return 0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2];
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+
+  // Function to set the text color based on background luminance
+  function setTextColor() {
+    const bgColor = window.getComputedStyle(aboutSection).backgroundColor;
+    const luminance = calculateLuminance(bgColor);
+
+    // Choose a contrasting text color
+    const textColor = luminance > 128 ? "#000" : "#fff";
+
+    aboutSection.style.color = textColor;
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-} 
+
+  // Initial call to set text color
+  setTextColor();
+
+  // Update text color when the window is resized (optional)
+  window.addEventListener("resize", setTextColor);
+});
+
+
+
+
+
+// const apiKey = '4eefe05a10e1ac8b0b5cb8486dcf60da';
+// const apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
+
+
+// const villageLocation = '25.5901672,84.1610003';
+
+
+// function getWeather() {
+//   $.ajax({
+//     url: `${apiUrl}?q=${villageLocation}&appid=${apiKey}&units=metric`,
+//     method: 'GET',
+//     success: function (data) {
+//       displayWeather(data);
+//     },
+//     error: function (error) {
+//       console.error('Error fetching weather data:', error.statusText);
+//       $('#weather-info').html('<p>Error fetching weather data</p>');
+//     },
+//   });
+// }
+
+
+// function displayWeather(data) {
+//   const weatherInfo = `
+//     <p>Temperature: ${data.main.temp} °C</p>
+//     <p>Condition: ${data.weather[0].description}</p>
+//     <p>Humidity: ${data.main.humidity}%</p>
+//     <p>Wind Speed: ${data.wind.speed} m/s</p>
+//   `;
+
+//   $('#weather-info').html(weatherInfo);
+// }
+
+
+// $(document).ready(function () {
+//   getWeather();
+// });
+
+
+
+
+
+
+
