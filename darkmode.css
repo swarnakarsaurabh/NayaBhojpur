@@ -39,7 +39,9 @@
     color: #fff;
   }
 
-
+  body.dark-mode .navbar a {
+    color: white;
+  }
   body.dark-mode #dark-mode-btn {
     background: linear-gradient(45deg, red, white);
     color: black;
@@ -89,6 +91,18 @@
   body.dark-mode .important-members-section  h2 {
 
     color: #fff; 
+  }
+  body.dark-mode .important-members-section  p {
+
+    color: #fff; 
+  }
+  body.dark-mode .important-members-section  h3{
+
+    color: black; 
+  }
+
+  body.dark-mode .important-members-section:hover {
+    background: linear-gradient(to left, rgb(167, 162, 162), black);
   }
 
 
