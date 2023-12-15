@@ -180,7 +180,6 @@ p {
 .services-section {
   padding: 50px;
   margin-top: 10vh;
-  background-color: #f4f4f4;
   background: linear-gradient(45deg, #000000, #8B0000);
   display: flex;
   flex-direction: column;
@@ -323,4 +322,52 @@ footer {
     .gallery-item:hover .image-description {
       opacity: 1;
     }
+    
+
+
+
+
+
+
+    .important-members-section {
+      background: transparent;
+      color: #071569; /* White text color for contrast */
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .member-card {
+      display: inline-block;
+      margin: 20px;
+      max-width: 300px;
+      /* background-color: aqua; */
+      vertical-align: top; /* Align at the top */
+    }
+    .member-card h3 {
+      cursor: pointer;
+    }
+
+    .member-photo {
+      border-radius: 50%;
+      overflow: hidden;
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 15px;
+      background: whitesmoke;
+    }
+    .member-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .member-description {
+      font-size: 16px;
+      line-height: 1.5;
+      color: black;
+    }
+
+
+
+
     
