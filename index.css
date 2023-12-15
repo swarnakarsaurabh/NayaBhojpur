@@ -13,17 +13,11 @@ body {
   min-height: 100vh;
   background: linear-gradient(to left, white, red);
   background-size: 200% 100%;
-  animation: gradientTransition 5s linear infinite;
+  
+  
 }
 
-@keyframes gradientTransition {
-  0% {
-    background-position: 100% 0;
-  }
-  100% {
-    background-position: -100% 0;
-  }
-}
+
 .container:hover {
   background: linear-gradient(to right, white, red );
   
@@ -89,6 +83,27 @@ a:hover {
   padding: 100px 0; /* Adjust the padding as needed */
   font-weight: bold;
   position: relative;
+  background: linear-gradient(to left, white, red); /* Added blue gradient */
+  background-size: 200% 100%; /* Adjusted to accommodate the second color */
+  animation: gradientTransition 3s linear infinite;
+}
+@keyframes gradientTransition {
+  0% {
+    background-position: -100% 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100%{
+    background-position: -100% 0;
+  
+  }
+}
+.site-header:hover {
+  background: linear-gradient(to right, white, red );
+  
+  
+  
 }
 
 .site-header h1 {
@@ -98,6 +113,7 @@ a:hover {
   background-clip: text; /* Clip the text to the background */
   -webkit-background-clip: text; /* For some older browsers */
   color: transparent; /* Set text color to transparent */
+  cursor: default;
 }
 
 
@@ -140,6 +156,7 @@ a:hover {
 h2 {
   color: #000000; /* Text color */
   font-size: 24px; /* Adjust the font size as needed */
+  cursor: default;
 }
 
 p {

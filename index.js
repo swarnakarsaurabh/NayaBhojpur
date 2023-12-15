@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const aboutSection = document.getElementById("aboutSection");
+  const about = document.getElementById("about");
 
   // Function to calculate the luminance of a color
   function calculateLuminance(color) {
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Function to set the text color based on background luminance
   function setTextColor() {
-    const bgColor = window.getComputedStyle(aboutSection).backgroundColor;
+    const bgColor = window.getComputedStyle(about).backgroundColor;
     const luminance = calculateLuminance(bgColor);
 
     // Choose a contrasting text color
