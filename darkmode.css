@@ -1,120 +1,108 @@
 #dark-mode-btn {
-    cursor: pointer;
-    background: linear-gradient(45deg, black, grey);
-    border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    font-size: 14px;
-    color: #fff;
-    transition: background 0.3s ease;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  background: linear-gradient(45deg, black, grey);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #fff;
+  transition: background 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 768px) {
+  #dark-mode-btn {
+    padding: 6px 12px;
+    font-size: 12px;
   }
-  @media screen and (max-width: 768px) {
-    #dark-mode-btn {
-      padding: 6px 12px;
-      font-size: 12px;
-    }
-  }
-  
-  #dark-mode-btn:hover {
-    background: linear-gradient(45deg, grey, black);
-  }
+}
+
+#dark-mode-btn:hover {
+  background: linear-gradient(45deg, grey, black);
+}
+
+body.dark-mode {
+  background: linear-gradient(to right, black, grey);
+}
+
+body.dark-mode .container {
+  background: linear-gradient(to right, black, grey);
+  color: #fff;
+}
+body.dark-mode .container:hover {
+  background: linear-gradient(to left, black, grey);
+  color: #fff;
+}
+
+body.dark-mode .navbar a {
+  color: white;
+}
+body.dark-mode .navbar a:hover {
+  color: red;
+}
+body.dark-mode #dark-mode-btn {
+  background: linear-gradient(45deg, red, white);
+  color: black;
+}
+body.dark-mode #dark-mode-btn:hover {
+  background: linear-gradient(45deg, white, red);
+  color: black;
+}
+
+body.dark-mode .site-header {
+  background: linear-gradient(to right, black, grey);
+  color: #fff;
+}
+body.dark-mode .site-header:hover {
+  background: linear-gradient(to left, black, grey);
+  color: #fff;
+}
+
+body.dark-mode .About {
+  background: linear-gradient(45deg, black, grey);
+  /* color: #fff; */
+}
+body.dark-mode .About h2 {
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+body.dark-mode .About p {
+  color: #fff;
+}
 
 
 
-  body.dark-mode {
-    background : linear-gradient(to right, black, grey);
-  }
-  
+
+body.dark-mode .services-section {
+  background: linear-gradient(45deg, black, grey);
+  color: #fff;
  
-  
-  
-  body.dark-mode .container {
-    background : linear-gradient(to right, black, grey);
-    color: #fff;
-  }
-  body.dark-mode .container:hover {
-    background : linear-gradient(to left, black, grey);
-    color: #fff;
-  }
+}
+body.dark-mode .services-section h2{
+  text-shadow: 3px 3px 4px rgba(255, 255, 255, 0.8);
+}
 
-  body.dark-mode .navbar a {
-    color: white;
-  }
-  body.dark-mode #dark-mode-btn {
-    background: linear-gradient(45deg, red, white);
-    color: black;
-  }
-  body.dark-mode #dark-mode-btn:hover {
-    background: linear-gradient(45deg, white, red);
-    color: black;
-  }
+body.dark-mode .important-members-section {
+  background: linear-gradient(to top, grey, black);
+  color: #fff;
+}
+body.dark-mode .important-members-section h2 {
+  color: black;
+  text-shadow: 3px 3px 4px rgba(255, 255, 255, 0.8);
+}
 
+body.dark-mode .important-members-section p {
+  color: #fff;
+}
+body.dark-mode .important-members-section h3 {
+  color: black;
+}
 
+body.dark-mode .important-members-section:hover {
+  background: linear-gradient(to left, rgb(167, 162, 162), black);
+}
 
-  body.dark-mode .site-header{
-    background : linear-gradient(to right, black, grey);
-    color: #fff;
-  }
-  body.dark-mode .site-header:hover {
-    background : linear-gradient(to left, black, grey);
-    color: #fff;
-  }
- 
-
- 
-
-  body.dark-mode .About{
-    background: linear-gradient(45deg, black, grey);
-    color: #fff;
-  }
-  body.dark-mode .About h2{
-    color: rgb(182, 43, 18);
-  }
-  body.dark-mode .About p{
-    color: #fff;
-  }
-
-
-
-
-  body.dark-mode .services-section {
-    background: linear-gradient(45deg, black, grey);
-    color: #fff;
-  }
-
-  body.dark-mode .important-members-section {
-    background: linear-gradient(to top, grey, black);
-    color: #fff; 
-  }
-  body.dark-mode .important-members-section  h2 {
-
-    color: #fff; 
-  }
-  body.dark-mode .important-members-section  p {
-
-    color: #fff; 
-  }
-  body.dark-mode .important-members-section  h3{
-
-    color: black; 
-  }
-
-  body.dark-mode .important-members-section:hover {
-    background: linear-gradient(to left, rgb(167, 162, 162), black);
-  }
-
-
-
-
-
-
-
-
-
-  body.dark-mode footer {
-    background-color: #252525; 
-    color: #fff; 
-  }
-  
+body.dark-mode footer {
+  background-color: #252525;
+  color: #fff;
+}

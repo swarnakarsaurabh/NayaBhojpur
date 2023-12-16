@@ -5,69 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="common.css" />
-    <link rel="stylesheet" href="darkmode.css">
+    <link rel="stylesheet" href="darkmode.css" />
     <script
-    src="https://kit.fontawesome.com/df03884f51.js"
-    crossorigin="anonymous"
-  ></script>
+      src="https://kit.fontawesome.com/df03884f51.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="index.js"></script>
     <style>
-        .services-section {
-  padding: 50px;
-  margin-top: 10vh;
-  /* background: linear-gradient(45deg,  red, white); */
-  background: transparent;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 50vh; /* Set a minimum height to center the content vertically */
-  /* border: 2PX solid blue; */
-}
-.services-section h2 {
-  font-weight: bold;
-  color: black;
-  font-size: 3rem;
-}
+      .services-section {
+        padding: 50px;
+        /* margin-top: 10vh; */
+        /* background: linear-gradient(45deg,  red, white); */
+        background: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 50vh; /* Set a minimum height to center the content vertically */
+        /* border: 2PX solid blue; */
+      }
+      .services-section h2 {
+        font-weight: bold;
+        font-size: 3rem;
+        color: black;
+        text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.8);
+      }
+    
+      .service-item {
+        margin-bottom: 20px;
+        text-align: center; /* Center text within each service item */
+        /* border: 2PX solid blue; */
+      }
 
-.service-item {
-  margin-bottom: 20px;
-  text-align: center; /* Center text within each service item */
-  /* border: 2PX solid blue; */
-}
+      .service-link {
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .service-link {
+        text-decoration: underline; /* Remove default underline for links */
+        color: #d0d6db; /* Set the link color to your preference */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Set the text shadow properties */
+      }
 
-.service-link {
-  display: block;
-  font-size: 18px;
-  font-weight: bold;
-}
-.service-link {
-  text-decoration: underline; /* Remove default underline for links */
-  color: #d0d6db; /* Set the link color to your preference */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Set the text shadow properties */
-}
-
-.service-link:hover {
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7); /* Change the text shadow on hover */
-}
-
-
+      .service-link:hover {
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7); /* Change the text shadow on hover */
+      }
     </style>
   </head>
   <body>
-<div class="container" id="home">
-    <nav class="navbar">
+    <div class="container" id="home">
+      <nav class="navbar">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="contact.html">Contact us</a></li>
-          <li> <button id="dark-mode-btn">Theme</button></li>
+          <li><button id="dark-mode-btn">Theme</button></li>
           <!-- <li><a href="#education">Education</a></li> -->
         </ul>
-       
       </nav>
-     <section class="services-section" id="services">
+      <section class="services-section" id="services">
         <h2>Services</h2>
 
         <!-- Service Item 1: PM Yojana -->
@@ -163,6 +161,6 @@
           <!-- Add more contact links as needed -->
         </div>
       </footer>
-</div>
+    </div>
   </body>
 </html>
