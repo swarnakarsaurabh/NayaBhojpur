@@ -1,134 +1,83 @@
+html{
+  scroll-behavior: smooth;
+}
+
 body {
-    background: linear-gradient(45deg, red, white);
-  }
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow: auto; /* Remove default margin and padding and hide overflow */
-  }
-
-  .container {
-    width: 100vw;
-    min-height: 100vh;
-    background: linear-gradient(to left, white, red);
-    background-size: 200% 100%;
-  }
-
-  .container:hover {
-    background: linear-gradient(to right, white, red);
-  }
-
-  /* Common styles for the navbar */
-  .navbar {
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 50px;
-  }
-
-  li {
-    margin: 0;
-  }
-
-  a {
-    text-decoration: none;
-    color: #000000;
-    font-weight: bold;
-    font-size: 16px;
-    transition: color 0.3s ease;
-  }
-
-  a:hover {
-    color: #aaffaa;
-  }
-
-  /* Responsive styles */
-  @media screen and (max-width: 768px) {
-    a {
-      font-size: 14px; /* Adjust the font size for smaller screens */
-    }
-  }
-
-  /* #dark-mode-btn {
-cursor: pointer;
-background: linear-gradient(45deg, black, grey);
-border: none;
-padding: 8px 16px;
-border-radius: 5px;
-font-size: 14px;
-color: #fff;
-transition: background 0.3s ease;
-backdrop-filter: blur(10px);
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(45deg, red, white);
+  box-sizing: border-box;
+  overflow: auto; /* Remove default margin and padding and hide overflow */
 }
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(to left, white, red);
+  background-size: 200% 100%;
+}
+
+.container:hover {
+  background: linear-gradient(to right, white, red);
+}
+
+/* Common styles for the navbar */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+}
+
+li {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #aaffaa;
+}
+
+/* Responsive styles */
 @media screen and (max-width: 768px) {
-#dark-mode-btn {
-  padding: 6px 12px;
-  font-size: 12px;
+  a {
+    font-size: 12px; 
+  }
 }
-}
-
-#dark-mode-btn:hover {
-background: linear-gradient(45deg, grey, black);
-}
-
-
-
-body.dark-mode {
-background : linear-gradient(to right, black, grey);
-}
-
-
-
-
-body.dark-mode .container {
-background : linear-gradient(to right, black, grey);
-color: #fff;
-}
-body.dark-mode .container:hover {
-background : linear-gradient(to left, black, grey);
-color: #fff;
-}
-
-body.dark-mode .navbar a {
-color: white;
-}
-body.dark-mode #dark-mode-btn {
-background: linear-gradient(45deg, red, white);
-color: black;
-}
-body.dark-mode #dark-mode-btn:hover {
-background: linear-gradient(45deg, white, red);
-color: black;
-} */
 
 footer {
-background-color: #8b0000; /* Blackish-red background color for the footer */
-color: white;
-text-align: center;
-padding: 20px;
+  background-color: #8b0000; 
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
 .contact-links {
-margin-top: 20px;
+  margin-top: 20px;
 }
 
 .contact-links a {
-color: white;
-margin: 0 10px;
-text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
 }

@@ -1,26 +1,26 @@
-html {
+/* html {
   scroll-behavior: smooth;
 }
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: auto; /* Remove default margin and padding and hide overflow */
-}
+  overflow: auto;
+} */
 
-.container {
+/* .container {
   width: 100vw;
   min-height: 100vh;
   background: linear-gradient(to left, white, red);
   background-size: 200% 100%;
-}
-
+} */
+/* 
 .container:hover {
   background: linear-gradient(to right, white, red);
-}
+} */
 
 /* Common styles for the navbar */
-.navbar {
+/* .navbar {
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   position: fixed;
@@ -28,9 +28,9 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
-}
+} */
 
-ul {
+/* ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -38,30 +38,30 @@ ul {
   justify-content: space-around;
   align-items: center;
   height: 50px;
-}
+} */
 
-li {
+/* li {
   margin: 0;
-}
+} */
 
-a {
+/* a {
   text-decoration: none;
   color: #000000;
   font-weight: bold;
   font-size: 16px;
   transition: color 0.3s ease;
-}
+} */
 
-.navbar a:hover {
+/* .navbar a:hover {
   color: blue;
-}
+} */
 
 /* Responsive styles */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   a {
-    font-size: 14px; /* Adjust the font size for smaller screens */
+    font-size: 12px; 
   }
-}
+} */
 
 /*header */
 
