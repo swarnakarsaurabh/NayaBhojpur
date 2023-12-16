@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const about = document.getElementById("about");
 
   // Function to calculate the luminance of a color
@@ -25,23 +25,32 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener("resize", setTextColor);
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const darkModeButton = document.getElementById('dark-mode-btn');
+document.addEventListener("DOMContentLoaded", function () {
+  const darkModeButton = document.getElementById("dark-mode-btn");
   const body = document.body;
 
-  darkModeButton.addEventListener('click', function () {
-    body.classList.toggle('dark-mode');
+  // Check if a theme preference is saved in local storage
+  const savedTheme = localStorage.getItem('theme');
+
+  // Set the initial theme based on the saved preference
+  if (savedTheme) {
+    body.classList.add(savedTheme);
+  }
+
+  darkModeButton.addEventListener("click", function () {
+    // Toggle the dark mode class on the body
+    body.classList.toggle("dark-mode");
+
+    // Update the theme preference in local storage
+    const currentTheme = body.classList.contains("dark-mode") ? "dark-mode" : "light-mode";
+    localStorage.setItem('theme', currentTheme);
   });
 });
-
-
 
 // const apiKey = '4eefe05a10e1ac8b0b5cb8486dcf60da';
 // const apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
-
 // const villageLocation = '25.5901672,84.1610003';
-
 
 // function getWeather() {
 //   $.ajax({
@@ -57,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function () {
 //   });
 // }
 
-
 // function displayWeather(data) {
 //   const weatherInfo = `
 //     <p>Temperature: ${data.main.temp} °C</p>
@@ -69,14 +77,6 @@ document.addEventListener('DOMContentLoaded', function () {
 //   $('#weather-info').html(weatherInfo);
 // }
 
-
 // $(document).ready(function () {
 //   getWeather();
 // });
-
-
-
-
-
-
-
