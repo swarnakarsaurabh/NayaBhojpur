@@ -83,7 +83,7 @@ body.dark-mode .services-section h2{
 }
 
 body.dark-mode .important-members-section {
-  background: linear-gradient(to top, grey, black);
+  background: linear-gradient(45deg, grey, black);
   color: #fff;
 }
 body.dark-mode .important-members-section h2 {
