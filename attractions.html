@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="darkmode.css" />
+    <script src="index.js"></script>
+    <style>
+      section {
+        max-width: 800px;
+        margin: 0px auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background: transparent;
+        padding: 50px 0;
+        text-align: center;
+      }
+      h1 {
+        font-weight: bold;
+        font-size: 2.4rem;
+        color: black;
+        text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.8);
+       
+      }
+      .attraction {
+        /* margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff; */
+
+        border-radius: 5px;
+        overflow: hidden;
+        margin: 0px auto 15px;
+        background: whitesmoke;
+      }
+
+      h2 {
+        color: #333;
+      }
+
+      p {
+        color: #666;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="home">
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#places">Places</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contributions</a></li>
+          <li><button id="dark-mode-btn">Theme</button></li>
+          <!-- <li><a href="#education">Education</a></li> -->
+        </ul>
+      </nav>
+      <section class="placestovisit" id="places">
+        <h1>Places to Visit</h1>
+        <div class="attraction">
+         
+          <img src="./resources/Image1.jpg" alt="Historical Landmark" />
+          <h2>Historical Landmark</h2>
+          <p>This historical site has been a part of our village since...</p>
+          <p>Opening Hours: 9:00 AM - 5:00 PM</p>
+          <p>Entrance Fee: $5.00</p>
+          <!-- Add more details as needed -->
+        </div>
+
+        <div class="attraction">
+          <img src="./resources/Image2.jpg" alt="Natural Park" />
+          <h2>Natural Park</h2>
+          <p>Explore the beauty of nature in our village's natural park...</p>
+          <p>Opening Hours: 8:00 AM - 7:00 PM</p>
+          <p>Free Admission</p>
+          <!-- Add more details as needed -->
+        </div>
+
+        <!-- Add more attractions as needed -->
+      </section>
+    </div>
+  </body>
+</html>

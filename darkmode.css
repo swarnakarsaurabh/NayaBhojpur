@@ -73,6 +73,13 @@ body.dark-mode .About p {
 
 
 
+body.dark-mode .placestovisit h1 {
+  color: black;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.877);
+}
+
+
+
 body.dark-mode .services-section {
   background: linear-gradient(45deg, black, grey);
   color: #fff;
