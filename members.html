@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="darkmode.css" />
+    <script src="index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/df03884f51.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      #important-members-section {
+        background-color: transparent;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+      }
+      .members-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 20px 0;
+      }
+      .no-results-section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 20px 0;
+      }
+      #templatesearch{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 20px 0;
+      }
+
+      .member-card {
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        width: 300px;
+        margin: 15px;
+        text-align: center;
+      }
+      .templatecard{
+        background-color: transparent;
+        /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+        /* border-radius: 8px; */
+        overflow: hidden;
+        width: 300px;
+        margin: 15px;
+        text-align: center;
+      }
+      #no-results-card {
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        width: 300px;
+        margin: 15px;
+        text-align: center;
+        color: red;
+      }
+
+      .member-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-bottom: 1px solid #ddd;
+      }
+      #templatesearch img{
+        width: 20vw;
+        height: 30vh;
+        object-fit: cover;
+      }
+
+      .member-card .member-details {
+        padding: 15px;
+      }
+
+      .member-card h3 {
+        margin: 0;
+        font-size: 1.2em;
+        color: #333;
+      }
+
+      .member-card p {
+        margin: 10px 0;
+        color: #666;
+      }
+
+      #search-form {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      #search-form input,
+      #search-form select {
+        margin-right: 10px;
+        padding: 5px;
+      }
+
+      #search-results {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(45deg, red, white);
+        box-sizing: border-box;
+        overflow: auto;
+      }
+
+      .container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      footer {
+        margin-top: auto; /* Push the footer to the bottom */
+        background-color: #8b0000;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      #original-members-list {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="home">
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="attractions.html">Places</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="#important-members-section">Members</a></li>
+          <li><a href="contact.html">Maker</a></li>
+          <li><button id="dark-mode-btn">Theme</button></li>
+          <!-- <li><a href="#education">Education</a></li> -->
+        </ul>
+      </nav>
+      <section id="important-members-section">
+        <!-- Search Form -->
+        <form id="search-form">
+          <input type="text" id="search-name" placeholder="Search by name" />
+          <!-- <input type="number" id="search-age" placeholder="Search by age"> -->
+          <button type="button" onclick="searchMembers()">Search</button>
+        </form>
+
+        <!-- Search Results -->
+        <div id="search-results" style="display: none">
+          <h3>Search Results</h3>
+          <div class="members-section" id="search-results-list"></div>
+        </div>
+        <div id="templatesearch">
+            <div class="templatecard">
+                <h1>Find a Village Member </h1>
+               
+            </div>
+           
+        </div>
+        <!-- Original Members -->
+        <div class="members-section" id="original-members-list">
+          <div class="member-card">
+            <img src="./resources/saurabh.png" alt="Image of the member" />
+            <div class="member-details">
+              <h3>Saurabh Verma</h3>
+              <p>Age: 25</p>
+              <p>Locality: Sonar Toli</p>
+            </div>
+          </div>
+
+          <div class="member-card">
+            <img src="./resources/Chandan.jpg" alt="Image of the member" />
+            <div class="member-details">
+              <h3>Chandan Soni</h3>
+              <p>Age: 30</p>
+              <p>Locality: Sonar Toli</p>
+            </div>
+          </div>
+          <div class="member-card">
+            <img src="./resources/Aashis.jpg" alt="Image of the member" />
+            <div class="member-details">
+              <h3>Aashis Soni</h3>
+              <p>Age: 35</p>
+              <p>Locality: Sonar Toli</p>
+            </div>
+          </div>
+
+          <div class="member-card">
+            <img src="./resources/Mohit.jpg" alt="Image of the member" />
+            <div class="member-details">
+              <h3>Mohit Verma</h3>
+              <p>Age: 16</p>
+              <p>Locality: Sonar Toli</p>
+            </div>
+          </div>
+          <div class="member-card">
+            <img src="./resources/Anand.jpg" alt="Image of the member" />
+            <div class="member-details">
+              <h3>Anand Verma</h3>
+              <p>Age: 31</p>
+              <p>Locality: Sonar Toli</p>
+            </div>
+          </div>
+
+          <div class="member-card">
+            <img src="./resources/Vishal.jpg" alt="Image of the member" />
+            <div class="member-details">
+              <h3>Vishal Verma</h3>
+              <p>Age: 32</p>
+              <p>Locality: Sonar Toli</p>
+            </div>
+          </div>
+        </div>
+        <div class="no-results-section">
+          
+          <div id="no-results-card" style="display: none">
+            <h3>No Results Found</h3>
+            <p>Sorry, there are no matching members.</p>
+            <p>
+              If you are a village member and want to be added in the list then
+              <a href="mailto:saurabhswarnakar394@gmail.com">mail here</a> with
+              your Photo, Name, Age and Locality name.
+            </p>
+          </div>
+        </div>
+      </section>
+      <footer>
+        &copy; 2023 Naya Bhojpur. All rights reserved.
+        <div class="contact-links">
+          Contact the Creator:
+          <a
+            href="mailto:saurabhswarnakar394@gmail.com"
+            title="Email"
+            target="_blank"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/saurabhverma394"
+            title="LinkedIn"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/swarnakar.saurabh"
+            title="Instagram"
+            target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <!-- Add more contact links as needed -->
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      function searchMembers() {
+        // Get search value
+        var searchName = document
+          .getElementById("search-name")
+          .value.toLowerCase();
+
+        // Get the original members list
+        var originalMembers = document.getElementById(
+          "original-members-list"
+        ).children;
+
+        // Filter members based on search criteria
+        var matchingMembers = Array.from(originalMembers).filter(function (
+          member
+        ) {
+          var memberName = member.querySelector("h3").innerText.toLowerCase();
+
+          // Check if the member matches the search criteria
+          return searchName === "" || memberName.includes(searchName);
+        });
+
+        // Ensure matchingMembers is 0 if searchName is empty
+        if (searchName === "") {
+          matchingMembers = [];
+        }
+
+        // Display search results
+        displaySearchResults(matchingMembers);
+      }
+
+      function displaySearchResults(matchingMembers) {
+        var searchResultsList = document.getElementById("search-results-list");
+        var searchResultsSection = document.getElementById("search-results");
+        var originalMembersList = document.getElementById(
+          "original-members-list"
+        );
+        var noResultsCard = document.getElementById("no-results-card");
+        var template = document.getElementById("templatesearch");
+
+        // Hide the "No Results Found" card by default
+        noResultsCard.style.display = "none";
+
+        if (matchingMembers.length > 0) {
+          // Display matching members
+          searchResultsList.innerHTML = "";
+          matchingMembers.forEach(function (member) {
+            searchResultsList.appendChild(member.cloneNode(true));
+          });
+          searchResultsSection.style.display = "block";
+
+          // Hide the original members list
+          originalMembersList.style.display = "none";
+          template.style.display = "none";
+        } else {
+          // Hide search results if no matches
+          searchResultsSection.style.display = "none";
+
+          // Display the "No Results Found" card
+          noResultsCard.style.display = "block";
+
+          // Display the original members list
+          originalMembersList.style.display = "none";
+          template.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
