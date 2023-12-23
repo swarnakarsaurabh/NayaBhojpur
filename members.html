@@ -156,8 +156,9 @@
       <section id="important-members-section">
         <!-- Search Form -->
         <form id="search-form">
-          <input type="text" id="search-name" placeholder="Search by name" />
-          <!-- <input type="number" id="search-age" placeholder="Search by age"> -->
+          <input type="text" id="search-first-name" placeholder="First Name" />
+          <input type="text" id="search-last-name" placeholder="Last Name" />
+          <!-- <input type="text" id="search-locality" placeholder="Search by locality"> -->
           <button type="button" onclick="searchMembers()">Search</button>
         </form>
 
@@ -178,7 +179,7 @@
             <div class="member-details">
               <h3>Saurabh Verma</h3>
               <p>Age: 25</p>
-              <p>Locality: Sonar Toli</p>
+              <p>Locality: SonarToli</p>
             </div>
           </div>
 
@@ -187,7 +188,7 @@
             <div class="member-details">
               <h3>Chandan Soni</h3>
               <p>Age: 30</p>
-              <p>Locality: Sonar Toli</p>
+              <p>Locality: SonarToli</p>
             </div>
           </div>
           <div class="member-card">
@@ -195,7 +196,7 @@
             <div class="member-details">
               <h3>Aashis Soni</h3>
               <p>Age: 35</p>
-              <p>Locality: Sonar Toli</p>
+              <p>Locality: SonarToli</p>
             </div>
           </div>
 
@@ -204,7 +205,7 @@
             <div class="member-details">
               <h3>Mohit Verma</h3>
               <p>Age: 16</p>
-              <p>Locality: Sonar Toli</p>
+              <p>Locality: SonarToli</p>
             </div>
           </div>
           <div class="member-card">
@@ -212,7 +213,7 @@
             <div class="member-details">
               <h3>Anand Verma</h3>
               <p>Age: 31</p>
-              <p>Locality: Sonar Toli</p>
+              <p>Locality: SonarToli</p>
             </div>
           </div>
 
@@ -221,7 +222,7 @@
             <div class="member-details">
               <h3>Vishal Verma</h3>
               <p>Age: 32</p>
-              <p>Locality: Sonar Toli</p>
+              <p>Locality: SonarToli</p>
             </div>
           </div>
           <div class="member-card">
@@ -229,7 +230,7 @@
             <div class="member-details">
               <h3>Himanshu Verma</h3>
               <p>Age: 22</p>
-              <p>Locality: Sonar Toli</p>
+              <p>Locality: SonarToli</p>
             </div>
           </div>
 
@@ -238,7 +239,7 @@
             <div class="member-details">
               <h3>Rahul Jaiswal</h3>
               <p>Age: 27</p>
-              <p>Locality: Sonar Toli</p>
+              <p>Locality: SonarToli</p>
             </div>
           </div>
         </div>
@@ -281,49 +282,49 @@
       </footer>
     </div>
 
-    <script>
+   
+
+    
+    <!-- <script>
       function searchMembers() {
-        // Get search value
-        var searchName = document
-          .getElementById("search-name")
-          .value.toLowerCase();
-
+        // Get search values
+        var searchFirstName = document.getElementById("search-first-name").value.toLowerCase();
+        var searchLastName = document.getElementById("search-last-name").value.toLowerCase();
+    
         // Get the original members list
-        var originalMembers = document.getElementById(
-          "original-members-list"
-        ).children;
-
+        var originalMembers = document.getElementById("original-members-list").children;
+    
         // Filter members based on search criteria
-        var matchingMembers = Array.from(originalMembers).filter(function (
-          member
-        ) {
-          var memberName = member.querySelector("h3").innerText.toLowerCase();
-
+        var matchingMembers = Array.from(originalMembers).filter(function (member) {
+          var memberFirstName = member.querySelector("h3").innerText.split(' ')[0].toLowerCase();
+          var memberLastName = member.querySelector("h3").innerText.split(' ')[1].toLowerCase();
+    
           // Check if the member matches the search criteria
-          return searchName === "" || memberName.includes(searchName);
+          return (
+            (searchFirstName === "" || memberFirstName.includes(searchFirstName)) &&
+            (searchLastName === "" || memberLastName.includes(searchLastName))
+          );
         });
-
-        // Ensure matchingMembers is 0 if searchName is empty
-        if (searchName === "") {
+    
+        // Ensure matchingMembers is 0 if both searchFirstName and searchLastName are empty
+        if (searchFirstName === "" && searchLastName === "") {
           matchingMembers = [];
         }
-
+    
         // Display search results
         displaySearchResults(matchingMembers);
       }
-
+    
       function displaySearchResults(matchingMembers) {
         var searchResultsList = document.getElementById("search-results-list");
         var searchResultsSection = document.getElementById("search-results");
-        var originalMembersList = document.getElementById(
-          "original-members-list"
-        );
+        var originalMembersList = document.getElementById("original-members-list");
         var noResultsCard = document.getElementById("no-results-card");
         var template = document.getElementById("templatesearch");
-
+    
         // Hide the "No Results Found" card by default
         noResultsCard.style.display = "none";
-
+    
         if (matchingMembers.length > 0) {
           // Display matching members
           searchResultsList.innerHTML = "";
@@ -331,22 +332,94 @@
             searchResultsList.appendChild(member.cloneNode(true));
           });
           searchResultsSection.style.display = "block";
-
+    
           // Hide the original members list
           originalMembersList.style.display = "none";
           template.style.display = "none";
         } else {
           // Hide search results if no matches
           searchResultsSection.style.display = "none";
-
+    
           // Display the "No Results Found" card
           noResultsCard.style.display = "block";
-
+    
           // Display the original members list
           originalMembersList.style.display = "none";
           template.style.display = "none";
         }
       }
     </script>
+     -->
+
+     <script>
+      function searchMembers() {
+          // Get search values
+          var searchFirstName = document.getElementById("search-first-name").value.toLowerCase();
+          var searchLastName = document.getElementById("search-last-name").value.toLowerCase();
+  
+          // Get the original members list
+          var originalMembers = document.getElementById("original-members-list").children;
+  
+          // Filter members based on search criteria
+          var matchingMembers = Array.from(originalMembers).filter(function (member) {
+              var memberFullName = member.querySelector("h3").innerText.toLowerCase();
+              var memberFirstName = memberFullName.split(' ')[0];
+              var memberLastName = memberFullName.split(' ')[1];
+  
+              // Check if all search fields are non-empty and the member matches the search criteria
+              return (
+                  searchFirstName !== "" &&
+                  searchLastName !== "" &&
+                  memberFirstName.toLowerCase().includes(searchFirstName) &&
+                  memberLastName.toLowerCase().includes(searchLastName)
+              );
+          });
+  
+          // Ensure matchingMembers is 0 if all search fields are empty
+          if (searchFirstName === "" && searchLastName === "") {
+              matchingMembers = [];
+          }
+  
+          // Display search results
+          displaySearchResults(matchingMembers);
+      }
+  
+      function displaySearchResults(matchingMembers) {
+          var searchResultsList = document.getElementById("search-results-list");
+          var searchResultsSection = document.getElementById("search-results");
+          var originalMembersList = document.getElementById("original-members-list");
+          var noResultsCard = document.getElementById("no-results-card");
+          var template = document.getElementById("templatesearch");
+  
+          // Hide the "No Results Found" card by default
+          noResultsCard.style.display = "none";
+  
+          if (matchingMembers.length > 0) {
+              // Display matching members
+              searchResultsList.innerHTML = "";
+              matchingMembers.forEach(function (member) {
+                  searchResultsList.appendChild(member.cloneNode(true));
+              });
+              searchResultsSection.style.display = "block";
+  
+              // Hide the original members list
+              originalMembersList.style.display = "none";
+              template.style.display = "none";
+          } else {
+              // Hide search results if no matches
+              searchResultsSection.style.display = "none";
+  
+              // Display the "No Results Found" card
+              noResultsCard.style.display = "block";
+  
+              // Display the original members list
+              originalMembersList.style.display = "none";
+              template.style.display = "none";
+          }
+      }
+  </script>
+  
+    
+    
   </body>
 </html>
