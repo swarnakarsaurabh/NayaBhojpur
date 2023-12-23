@@ -73,7 +73,9 @@
         cursor: pointer;
         -webkit-transition: all 0.2s;
         transition: all 0.2s;
+        object-fit: cover;
       }
+      
       .modal-img,.model-vid{
         width:100%;
         height:auto;
@@ -92,6 +94,36 @@
 }
       
       
+.img-container {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+ 
+.hover-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Hide by default */
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .img-container:hover .hover-content {
+    opacity: 1; /* Show on hover */
+  }
+
+  .hover-content p {
+    margin: 0;
+  }
+
       
       
       
@@ -119,6 +151,155 @@
           
           <h1>Image Gallery</h1><hr>
 <div id="gallery" class="container-fluid">  
+  <div class="img-container">
+    <img src="./resources/Image1.jpg" class="img-responsive" >
+    <div class="hover-content">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis blanditiis inventore voluptatem soluta sint sit quaerat qui. Voluptate reprehenderit ipsa labore voluptatibus architecto modi, cupiditate maiores ex iure mollitia repellendus!</p>
+    </div>
+  </div>
+  <div class="img-container">
+    <img src="./resources/Image2.jpg" class="img-responsive" >
+    <div class="hover-content">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis blanditiis inventore voluptatem soluta sint sit quaerat qui. Voluptate reprehenderit ipsa labore voluptatibus architecto modi, cupiditate maiores ex iure mollitia repellendus!</p>
+    </div>
+  </div>
+  <div class="img-container">
+    <img src="./resources/Image3.jpg" class="img-responsive" >
+    <div class="hover-content">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis blanditiis inventore voluptatem soluta sint sit quaerat qui. Voluptate reprehenderit ipsa labore voluptatibus architecto modi, cupiditate maiores ex iure mollitia repellendus!</p>
+    </div>
+  </div>
+  <video class="vid" controls>
+    <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+    </source>
+  </video>
+  <div class="img-container">
+    <img src="./resources/Image4.jpg" class="img-responsive" >
+    <div class="hover-content">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis blanditiis inventore voluptatem soluta sint sit quaerat qui. Voluptate reprehenderit ipsa labore voluptatibus architecto modi, cupiditate maiores ex iure mollitia repellendus!</p>
+    </div>
+  </div>
+  <div class="img-container">
+    <img src="./resources/Image5.jpg" class="img-responsive" >
+    <div class="hover-content">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis blanditiis inventore voluptatem soluta sint sit quaerat qui. Voluptate reprehenderit ipsa labore voluptatibus architecto modi, cupiditate maiores ex iure mollitia repellendus!</p>
+    </div>
+  </div>
+  <div class="img-container">
+    <img src="./resources/Image6.jpg" class="img-responsive" >
+    <div class="hover-content">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis blanditiis inventore voluptatem soluta sint sit quaerat qui. Voluptate reprehenderit ipsa labore voluptatibus architecto modi, cupiditate maiores ex iure mollitia repellendus!</p>
+    </div>
+  </div>
+  <div class="img-container">
+    <img src="./resources/Image7.jpg" class="img-responsive" >
+    <div class="hover-content">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis blanditiis inventore voluptatem soluta sint sit quaerat qui. Voluptate reprehenderit ipsa labore voluptatibus architecto modi, cupiditate maiores ex iure mollitia repellendus!</p>
+    </div>
+  </div>
+  <div class="img-container">
+    <img src="./resources/Image8.jpg" class="img-responsive" >
+    <div class="hover-content">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis blanditiis inventore voluptatem soluta sint sit quaerat qui. Voluptate reprehenderit ipsa labore voluptatibus architecto modi, cupiditate maiores ex iure mollitia repellendus!</p>
+    </div>
+  </div>
+  <div class="img-container">
+    <img src="./resources/Image9.jpg" class="img-responsive" >
+    <div class="hover-content">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis blanditiis inventore voluptatem soluta sint sit quaerat qui. Voluptate reprehenderit ipsa labore voluptatibus architecto modi, cupiditate maiores ex iure mollitia repellendus!</p>
+    </div>
+  </div>
+  <div class="img-container">
+    <img src="./resources/Image10.jpg" class="img-responsive" >
+    <div class="hover-content">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis blanditiis inventore voluptatem soluta sint sit quaerat qui. Voluptate reprehenderit ipsa labore voluptatibus architecto modi, cupiditate maiores ex iure mollitia repellendus!</p>
+    </div>
+  </div>
+  <div class="img-container">
+    <img src="./resources/Image1.jpg" class="img-responsive" >
+    <div class="hover-content">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis blanditiis inventore voluptatem soluta sint sit quaerat qui. Voluptate reprehenderit ipsa labore voluptatibus architecto modi, cupiditate maiores ex iure mollitia repellendus!</p>
+    </div>
+  </div>
+  <div class="img-container">
+    <img src="./resources/Image2.jpg" class="img-responsive" >
+    <div class="hover-content">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis blanditiis inventore voluptatem soluta sint sit quaerat qui. Voluptate reprehenderit ipsa labore voluptatibus architecto modi, cupiditate maiores ex iure mollitia repellendus!</p>
+    </div>
+  </div>
+  <div class="img-container">
+    <img src="./resources/Image3.jpg" class="img-responsive" >
+    <div class="hover-content">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis blanditiis inventore voluptatem soluta sint sit quaerat qui. Voluptate reprehenderit ipsa labore voluptatibus architecto modi, cupiditate maiores ex iure mollitia repellendus!</p>
+    </div>
+  </div>
+  <video class="vid" controls>
+    <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+    </source>
+  </video>
+  <div class="img-container">
+    <img src="./resources/Image4.jpg" class="img-responsive" >
+    <div class="hover-content">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis blanditiis inventore voluptatem soluta sint sit quaerat qui. Voluptate reprehenderit ipsa labore voluptatibus architecto modi, cupiditate maiores ex iure mollitia repellendus!</p>
+    </div>
+  </div>
+  <div class="img-container">
+    <img src="./resources/Image5.jpg" class="img-responsive" >
+    <div class="hover-content">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis blanditiis inventore voluptatem soluta sint sit quaerat qui. Voluptate reprehenderit ipsa labore voluptatibus architecto modi, cupiditate maiores ex iure mollitia repellendus!</p>
+    </div>
+  </div>
+  <div class="img-container">
+    <img src="./resources/Image6.jpg" class="img-responsive" >
+    <div class="hover-content">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis blanditiis inventore voluptatem soluta sint sit quaerat qui. Voluptate reprehenderit ipsa labore voluptatibus architecto modi, cupiditate maiores ex iure mollitia repellendus!</p>
+    </div>
+  </div>
+  <div class="img-container">
+    <img src="./resources/Image7.jpg" class="img-responsive" >
+    <div class="hover-content">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis blanditiis inventore voluptatem soluta sint sit quaerat qui. Voluptate reprehenderit ipsa labore voluptatibus architecto modi, cupiditate maiores ex iure mollitia repellendus!</p>
+    </div>
+  </div>
+  <div class="img-container">
+    <img src="./resources/Image8.jpg" class="img-responsive" >
+    <div class="hover-content">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis blanditiis inventore voluptatem soluta sint sit quaerat qui. Voluptate reprehenderit ipsa labore voluptatibus architecto modi, cupiditate maiores ex iure mollitia repellendus!</p>
+    </div>
+  </div>
+  <div class="img-container">
+    <img src="./resources/Image9.jpg" class="img-responsive" >
+    <div class="hover-content">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis blanditiis inventore voluptatem soluta sint sit quaerat qui. Voluptate reprehenderit ipsa labore voluptatibus architecto modi, cupiditate maiores ex iure mollitia repellendus!</p>
+    </div>
+  </div>
+  <div class="img-container">
+    <img src="./resources/Image10.jpg" class="img-responsive" >
+    <div class="hover-content">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis blanditiis inventore voluptatem soluta sint sit quaerat qui. Voluptate reprehenderit ipsa labore voluptatibus architecto modi, cupiditate maiores ex iure mollitia repellendus!</p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- <img src="./resources/Image1.jpg" class="img-responsive">
+  <img src="./resources/Image2.jpg" class="img-responsive">
+   <img src="./resources/Image3.jpg" class="img-responsive">
+  <video class="vid" controls>
+    <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+    </source>
+  </video>
+  <img src="./resources/Image4.jpg" class="img-responsive">
+  <img src="./resources/Image5.jpg" class="img-responsive">
+<img src="./resources/Image6.jpg" class="img-responsive">
+  <img src="./resources/Image7.jpg" class="card img-responsive">
+  <img src="./resources/Image8.jpg" class="img-responsive">
+  <img src="./resources/Image9.jpg" class="img-responsive">
+  <img src="./resources/Image10.jpg" class="img-responsive">
   <img src="./resources/Image1.jpg" class="img-responsive">
   <img src="./resources/Image2.jpg" class="img-responsive">
    <img src="./resources/Image3.jpg" class="img-responsive">
@@ -133,11 +314,7 @@
   <img src="./resources/Image8.jpg" class="img-responsive">
   <img src="./resources/Image9.jpg" class="img-responsive">
   <img src="./resources/Image10.jpg" class="img-responsive">
-  <img src="https://source.unsplash.com/600x400?landscape,portrait" class="img-responsive">
-<img src="https://source.unsplash.com/1100x1600?landscape,portrait" class="img-responsive">
-<img src="https://source.unsplash.com/1600x1100?landscape,portrait" class="img-responsive">
-<img src="https://source.unsplash.com/992x768?landscape,portrait" class="img-responsive">
-<img src="https://source.unsplash.com/768x992?landscape,portrait" class="img-responsive">
+  -->
 
 </div>
 

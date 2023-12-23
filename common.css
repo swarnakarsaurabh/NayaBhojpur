@@ -55,8 +55,9 @@ a {
 }
 
 a:hover {
-  color: #aaffaa;
+  color: #fc2a05;
 }
+
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
