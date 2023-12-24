@@ -279,7 +279,7 @@
             </div>
           </div>
         </div>
-        <div class="no-results-section">
+        <div class="no-results-section" id="no-result-card">
           <div id="no-results-card" style="display: none">
             <h3>No Results Found</h3>
             <p>Sorry, there are no matching members.</p>
@@ -342,11 +342,13 @@
         );
         var viewAllButton = document.getElementById("view-all-button");
         var searchResultsSection = document.getElementById("search-results");
+        var noResultsCard = document.getElementById("no-results-card");
 
         // Reset search results and hide the "Search Results" section
         document.getElementById("search-results-list").innerHTML = "";
         searchResultsSection.style.display = "none";
-
+        // document.getElementById("no-results-card").innerHTML = "";
+        noResultsCard.style.display= "none"
         // Toggle the visibility of the original members list
         originalMembersListAll.style.display =
           originalMembersListAll.style.display === "none" ? "flex" : "none";
@@ -359,6 +361,7 @@
       }
       // Initial setup: hide the original members list and show the "View All Members" button
 
+      document.getElementById("no-results-card").style.display = "none";
       document.getElementById("original-members-list").style.display = "none";
       document.getElementById("view-all-button").style.display = "block";
 
