@@ -138,6 +138,10 @@
       #original-members-list {
         display: none;
       }
+
+      #view-all-button {
+        margin-top: 10px;
+      }
     </style>
   </head>
   <body>
@@ -160,6 +164,14 @@
           <input type="text" id="search-last-name" placeholder="Last Name" />
           <!-- <input type="text" id="search-locality" placeholder="Search by locality"> -->
           <button type="button" onclick="searchMembers()">Search</button>
+          <!-- View All Button -->
+          <button
+            type="button"
+            id="view-all-button"
+            onclick="promptForPassword()"
+          >
+            View All Members
+          </button>
         </form>
 
         <!-- Search Results -->
@@ -306,73 +318,50 @@
       </footer>
     </div>
 
-    <!-- <script>
-      function searchMembers() {
-        // Get search values
-        var searchFirstName = document.getElementById("search-first-name").value.toLowerCase();
-        var searchLastName = document.getElementById("search-last-name").value.toLowerCase();
-    
-        // Get the original members list
-        var originalMembers = document.getElementById("original-members-list").children;
-    
-        // Filter members based on search criteria
-        var matchingMembers = Array.from(originalMembers).filter(function (member) {
-          var memberFirstName = member.querySelector("h3").innerText.split(' ')[0].toLowerCase();
-          var memberLastName = member.querySelector("h3").innerText.split(' ')[1].toLowerCase();
-    
-          // Check if the member matches the search criteria
-          return (
-            (searchFirstName === "" || memberFirstName.includes(searchFirstName)) &&
-            (searchLastName === "" || memberLastName.includes(searchLastName))
-          );
-        });
-    
-        // Ensure matchingMembers is 0 if both searchFirstName and searchLastName are empty
-        if (searchFirstName === "" && searchLastName === "") {
-          matchingMembers = [];
-        }
-    
-        // Display search results
-        displaySearchResults(matchingMembers);
-      }
-    
-      function displaySearchResults(matchingMembers) {
-        var searchResultsList = document.getElementById("search-results-list");
-        var searchResultsSection = document.getElementById("search-results");
-        var originalMembersList = document.getElementById("original-members-list");
-        var noResultsCard = document.getElementById("no-results-card");
-        var template = document.getElementById("templatesearch");
-    
-        // Hide the "No Results Found" card by default
-        noResultsCard.style.display = "none";
-    
-        if (matchingMembers.length > 0) {
-          // Display matching members
-          searchResultsList.innerHTML = "";
-          matchingMembers.forEach(function (member) {
-            searchResultsList.appendChild(member.cloneNode(true));
-          });
-          searchResultsSection.style.display = "block";
-    
-          // Hide the original members list
-          originalMembersList.style.display = "none";
-          template.style.display = "none";
-        } else {
-          // Hide search results if no matches
-          searchResultsSection.style.display = "none";
-    
-          // Display the "No Results Found" card
-          noResultsCard.style.display = "block";
-    
-          // Display the original members list
-          originalMembersList.style.display = "none";
-          template.style.display = "none";
-        }
-      }
-    </script>
-     -->
-
     <script>
+      // Set your desired password
+      var correctPassword = "802133";
+
+      function promptForPassword() {
+        // Prompt the user for a password
+        var enteredPassword = prompt("Please enter the password:");
+
+        // Check if the entered password is correct
+        if (enteredPassword === correctPassword) {
+          // Call the function to toggle visibility if the password is correct
+          toggleAllMembers();
+        } else {
+          // Inform the user that the password is incorrect
+          alert("Incorrect password. Please try again.");
+        }
+      }
+
+      function toggleAllMembers() {
+        var originalMembersListAll = document.getElementById(
+          "original-members-list"
+        );
+        var viewAllButton = document.getElementById("view-all-button");
+        var searchResultsSection = document.getElementById("search-results");
+
+        // Reset search results and hide the "Search Results" section
+        document.getElementById("search-results-list").innerHTML = "";
+        searchResultsSection.style.display = "none";
+
+        // Toggle the visibility of the original members list
+        originalMembersListAll.style.display =
+          originalMembersListAll.style.display === "none" ? "flex" : "none";
+
+        // Update the button text based on the visibility of the original members list
+        // viewAllButton.innerText =
+        //   originalMembersListAll.style.display === "none"
+        //     ? "View All Members"
+        //     : "Hide All Members";
+      }
+      // Initial setup: hide the original members list and show the "View All Members" button
+
+      document.getElementById("original-members-list").style.display = "none";
+      document.getElementById("view-all-button").style.display = "block";
+
       function searchMembers() {
         // Get search values
         var searchFirstName = document
@@ -438,6 +427,7 @@
           // Hide the original members list
           originalMembersList.style.display = "none";
           template.style.display = "none";
+          originalMembersListAll.style.display = "none";
         } else {
           // Hide search results if no matches
           searchResultsSection.style.display = "none";
@@ -448,6 +438,7 @@
           // Display the original members list
           originalMembersList.style.display = "none";
           template.style.display = "none";
+          originalMembersListAll.style.display = "none";
         }
       }
     </script>
