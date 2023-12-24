@@ -3,9 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./resources/favicon.ico" type="image/x-icon" />
+    <meta property="og:title" content="Naya Bhojpur" />
+    <meta
+      name="description"
+      content="Explore the beauty and culture of Naya Bhojpur, a charming village with rich heritage and warm community. Discover its traditions, landmarks, and more."
+    />
+
+    <meta
+      property="og:description"
+      content="Explore the beauty and culture of Naya Bhojpur, a charming village with rich heritage and warm community. Discover its traditions, landmarks, and more."
+    />
+    <meta
+      property="og:image"
+      content="https://swarnakarsaurabh.github.io/NayaBhojpur/"
+    />
+    <!-- Replace with the actual URL of your main image -->
+    <meta
+      property="og:url"
+      content="https://swarnakarsaurabh.github.io/NayaBhojpur/"
+    />
+
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="darkmode.css"/>
-    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="darkmode.css" />
+    <link rel="stylesheet" href="common.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
@@ -18,17 +39,15 @@
     ></script>
     <script src="index.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    
+
     <title>Naya Bhojpur</title>
     <style>
-      #details{
+      #details {
         text-align: center;
       }
       #details p strong {
         text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.5);
       }
-     
-      
     </style>
   </head>
   <body>
@@ -40,11 +59,10 @@
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="members.html">Members</a></li>
           <li><a href="contact.html">Maker</a></li>
-          <li> <button id="dark-mode-btn">Theme</button></li>
+          <li><button id="dark-mode-btn">Theme</button></li>
           <!-- <li><a href="#education">Education</a></li> -->
         </ul>
-        
- </nav>
+      </nav>
       <header class="site-header">
         <h1>Naya Bhojpur</h1>
       </header>
@@ -98,17 +116,19 @@
           <p><strong>State:</strong> Bihar</p>
           <p><strong>Division:</strong> Patna</p>
           <p><strong>Language:</strong> Bhojpuri and Hindi</p>
-          <p><strong>Current Date and Time:</strong> <span id="current-time"></span></p>
+          <p>
+            <strong>Current Date and Time:</strong>
+            <span id="current-time"></span>
+          </p>
           <!-- <p><strong>Date:</strong> <span id="current-date"></span></p> -->
           <p><strong>Time zone:</strong> IST (UTC+5:30)</p>
-          <p><strong>Elevation / Altitude:</strong> 70 meters. Above Sea level</p>
+          <p>
+            <strong>Elevation / Altitude:</strong> 70 meters. Above Sea level
+          </p>
           <p><strong>Telephone Code / Std Code:</strong> 06323</p>
         </div>
       </section>
-      
 
-   
-    
       <footer>
         &copy; 2023 Naya Bhojpur. All rights reserved.
         <div class="contact-links">
@@ -134,36 +154,39 @@
           <!-- Add more contact links as needed -->
         </div>
       </footer>
-</div>
+    </div>
 
     <script>
-     
-
-
       function updateDateTime() {
-        const currentTimeElement = document.getElementById('current-time');
+        const currentTimeElement = document.getElementById("current-time");
         // const currentDateElement = document.getElementById('current-date');
 
         const now = new Date();
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', timeZoneName: 'short' };
+        const options = {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          timeZoneName: "short",
+        };
 
-        const formattedTime = now.toLocaleTimeString('en-IN', options);
+        const formattedTime = now.toLocaleTimeString("en-IN", options);
         // const formattedDate = now.toLocaleDateString('en-IN', options);
 
         currentTimeElement.textContent = formattedTime;
         // currentDateElement.textContent = formattedDate;
-    }
+      }
 
-    // Update date and time every second
-    setInterval(updateDateTime, 1000);
+      // Update date and time every second
+      setInterval(updateDateTime, 1000);
 
-    // Initial call to set the date and time
-    updateDateTime();
+      // Initial call to set the date and time
+      updateDateTime();
 
-
-
-
-     lightbox.option({
+      lightbox.option({
         resizeDuration: 200,
         wrapAround: true,
       });
