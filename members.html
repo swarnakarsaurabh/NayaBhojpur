@@ -175,7 +175,10 @@
         <!-- Original Members -->
         <div class="members-section" id="original-members-list">
           <div class="member-card">
-            <img src="./resources/members/saurabh.png" alt="Image of the member" />
+            <img
+              src="./resources/members/saurabh.png"
+              alt="Image of the member"
+            />
             <div class="member-details">
               <h3>Saurabh Verma</h3>
               <p>Age: 25</p>
@@ -184,7 +187,10 @@
           </div>
 
           <div class="member-card">
-            <img src="./resources/members/Chandan.jpg" alt="Image of the member" />
+            <img
+              src="./resources/members/Chandan.jpg"
+              alt="Image of the member"
+            />
             <div class="member-details">
               <h3>Chandan Soni</h3>
               <p>Age: 30</p>
@@ -192,7 +198,10 @@
             </div>
           </div>
           <div class="member-card">
-            <img src="./resources/members/Aashis.jpg" alt="Image of the member" />
+            <img
+              src="./resources/members/Aashis.jpg"
+              alt="Image of the member"
+            />
             <div class="member-details">
               <h3>Aashis Soni</h3>
               <p>Age: 35</p>
@@ -201,7 +210,10 @@
           </div>
 
           <div class="member-card">
-            <img src="./resources/members/Mohit.jpg" alt="Image of the member" />
+            <img
+              src="./resources/members/Mohit.jpg"
+              alt="Image of the member"
+            />
             <div class="member-details">
               <h3>Mohit Verma</h3>
               <p>Age: 16</p>
@@ -209,7 +221,10 @@
             </div>
           </div>
           <div class="member-card">
-            <img src="./resources/members/Anand.jpg" alt="Image of the member" />
+            <img
+              src="./resources/members/Anand.jpg"
+              alt="Image of the member"
+            />
             <div class="member-details">
               <h3>Anand Verma</h3>
               <p>Age: 31</p>
@@ -218,7 +233,10 @@
           </div>
 
           <div class="member-card">
-            <img src="./resources/members/Vishal.jpg" alt="Image of the member" />
+            <img
+              src="./resources/members/Vishal.jpg"
+              alt="Image of the member"
+            />
             <div class="member-details">
               <h3>Vishal Verma</h3>
               <p>Age: 32</p>
@@ -226,7 +244,10 @@
             </div>
           </div>
           <div class="member-card">
-            <img src="./resources/members/Himanshu.jpg" alt="Image of the member" />
+            <img
+              src="./resources/members/Himanshu.jpg"
+              alt="Image of the member"
+            />
             <div class="member-details">
               <h3>Himanshu Verma</h3>
               <p>Age: 22</p>
@@ -235,7 +256,10 @@
           </div>
 
           <div class="member-card">
-            <img src="./resources/members/Rahul.png" alt="Image of the member" />
+            <img
+              src="./resources/members/Rahul.png"
+              alt="Image of the member"
+            />
             <div class="member-details">
               <h3>Rahul Jaiswal</h3>
               <p>Age: 27</p>
@@ -282,9 +306,6 @@
       </footer>
     </div>
 
-   
-
-    
     <!-- <script>
       function searchMembers() {
         // Get search values
@@ -351,75 +372,84 @@
     </script>
      -->
 
-     <script>
+    <script>
       function searchMembers() {
-          // Get search values
-          var searchFirstName = document.getElementById("search-first-name").value.toLowerCase();
-          var searchLastName = document.getElementById("search-last-name").value.toLowerCase();
-  
-          // Get the original members list
-          var originalMembers = document.getElementById("original-members-list").children;
-  
-          // Filter members based on search criteria
-          var matchingMembers = Array.from(originalMembers).filter(function (member) {
-              var memberFullName = member.querySelector("h3").innerText.toLowerCase();
-              var memberFirstName = memberFullName.split(' ')[0];
-              var memberLastName = memberFullName.split(' ')[1];
-  
-              // Check if all search fields are non-empty and the member matches the search criteria
-              return (
-                  searchFirstName !== "" &&
-                  searchLastName !== "" &&
-                  memberFirstName.toLowerCase().includes(searchFirstName) &&
-                  memberLastName.toLowerCase().includes(searchLastName)
-              );
-          });
-  
-          // Ensure matchingMembers is 0 if all search fields are empty
-          if (searchFirstName === "" && searchLastName === "") {
-              matchingMembers = [];
-          }
-  
-          // Display search results
-          displaySearchResults(matchingMembers);
+        // Get search values
+        var searchFirstName = document
+          .getElementById("search-first-name")
+          .value.toLowerCase();
+        var searchLastName = document
+          .getElementById("search-last-name")
+          .value.toLowerCase();
+
+        // Get the original members list
+        var originalMembers = document.getElementById(
+          "original-members-list"
+        ).children;
+
+        // Filter members based on search criteria
+        var matchingMembers = Array.from(originalMembers).filter(function (
+          member
+        ) {
+          var memberFullName = member
+            .querySelector("h3")
+            .innerText.toLowerCase();
+          var memberFirstName = memberFullName.split(" ")[0];
+          var memberLastName = memberFullName.split(" ")[1];
+
+          // Check if all search fields are non-empty and the member matches the search criteria
+          return (
+            searchFirstName !== "" &&
+            searchLastName !== "" &&
+            memberFirstName.toLowerCase() === searchFirstName &&
+            memberLastName.toLowerCase() === searchLastName
+          );
+        });
+
+        // Ensure matchingMembers is 0 if all search fields are empty
+        if (searchFirstName === "" && searchLastName === "") {
+          matchingMembers = [];
+        }
+
+        // Display search results
+        displaySearchResults(matchingMembers);
       }
-  
+
       function displaySearchResults(matchingMembers) {
-          var searchResultsList = document.getElementById("search-results-list");
-          var searchResultsSection = document.getElementById("search-results");
-          var originalMembersList = document.getElementById("original-members-list");
-          var noResultsCard = document.getElementById("no-results-card");
-          var template = document.getElementById("templatesearch");
-  
-          // Hide the "No Results Found" card by default
-          noResultsCard.style.display = "none";
-  
-          if (matchingMembers.length > 0) {
-              // Display matching members
-              searchResultsList.innerHTML = "";
-              matchingMembers.forEach(function (member) {
-                  searchResultsList.appendChild(member.cloneNode(true));
-              });
-              searchResultsSection.style.display = "block";
-  
-              // Hide the original members list
-              originalMembersList.style.display = "none";
-              template.style.display = "none";
-          } else {
-              // Hide search results if no matches
-              searchResultsSection.style.display = "none";
-  
-              // Display the "No Results Found" card
-              noResultsCard.style.display = "block";
-  
-              // Display the original members list
-              originalMembersList.style.display = "none";
-              template.style.display = "none";
-          }
+        var searchResultsList = document.getElementById("search-results-list");
+        var searchResultsSection = document.getElementById("search-results");
+        var originalMembersList = document.getElementById(
+          "original-members-list"
+        );
+        var noResultsCard = document.getElementById("no-results-card");
+        var template = document.getElementById("templatesearch");
+
+        // Hide the "No Results Found" card by default
+        noResultsCard.style.display = "none";
+
+        if (matchingMembers.length > 0) {
+          // Display matching members
+          searchResultsList.innerHTML = "";
+          matchingMembers.forEach(function (member) {
+            searchResultsList.appendChild(member.cloneNode(true));
+          });
+          searchResultsSection.style.display = "block";
+
+          // Hide the original members list
+          originalMembersList.style.display = "none";
+          template.style.display = "none";
+        } else {
+          // Hide search results if no matches
+          searchResultsSection.style.display = "none";
+
+          // Display the "No Results Found" card
+          noResultsCard.style.display = "block";
+
+          // Display the original members list
+          originalMembersList.style.display = "none";
+          template.style.display = "none";
+        }
       }
-  </script>
-  
-    
-    
+    </script>
   </body>
 </html>
