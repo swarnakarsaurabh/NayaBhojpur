@@ -63,14 +63,17 @@ body.dark-mode .About {
   /* color: #fff; */
 }
 body.dark-mode .About h2 {
-  color: #fff;
+  color: black;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
 }
 body.dark-mode .About p {
   color: #fff;
 }
 
-
+body.dark-mode #details p strong{
+  color: black;
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+}
 
 
 body.dark-mode .placestovisit h1 {
