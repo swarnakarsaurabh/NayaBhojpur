@@ -147,6 +147,15 @@ p {
   font-size: 16px; /* Adjust the font size as needed */
 }
 
+#details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#details p strong {
+  text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.5);
+}
 
 
 /* Position the image container (needed to position the left and right arrows) */
