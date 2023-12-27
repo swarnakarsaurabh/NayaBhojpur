@@ -34,11 +34,11 @@ body.dark-mode .container:hover {
   color: #fff;
 }
 
-body.dark-mode .navbar a {
+body.dark-mode  a {
   color: white;
 }
 
-body.dark-mode .navbar a:hover {
+body.dark-mode  a:hover {
   color: red;
 }
 body.dark-mode #dark-mode-btn {
@@ -63,13 +63,22 @@ body.dark-mode .About {
   background: linear-gradient(45deg, black, grey);
   /* color: #fff; */
 }
-body.dark-mode .About h2 {
+
+
+body.dark-mode  h1 {
+  color: black;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.877);
+}
+
+
+body.dark-mode  h2 {
   color: black;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
 }
-body.dark-mode .About p {
+body.dark-mode  p {
   color: #fff;
 }
+
 
 body.dark-mode #details p strong{
   color: black;
@@ -77,11 +86,10 @@ body.dark-mode #details p strong{
 }
 
 
-body.dark-mode .placestovisit h1 {
-  color: black;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.877);
-}
 
+body.dark-mode .attraction{
+  background: linear-gradient(white, grey) ;
+}
 
 
 body.dark-mode .services-section {
@@ -89,23 +97,15 @@ body.dark-mode .services-section {
   color: #fff;
  
 }
-body.dark-mode .services-section h2{
-  text-shadow: 3px 3px 4px rgba(255, 255, 255, 0.8);
-}
 
 body.dark-mode .important-members-section {
   background: linear-gradient(45deg, grey, black);
   color: #fff;
 }
-body.dark-mode .important-members-section h2 {
-  color: black;
-  text-shadow: 3px 3px 4px rgba(255, 255, 255, 0.8);
-}
 
-body.dark-mode .important-members-section p {
-  color: #fff;
-}
-body.dark-mode .important-members-section h3 {
+
+
+body.dark-mode h3 {
   color: black;
 }
 

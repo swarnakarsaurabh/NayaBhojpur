@@ -71,7 +71,8 @@ body {
   background-size: cover;
   background-position: center;
   color: transparent; /* Set text color to transparent */
-  padding: 100px 0; /* Adjust the padding as needed */
+  padding: 80px 0; /* Adjust the padding as needed */
+  padding-bottom: 40px;
   font-weight: bold;
   position: relative;
   background: linear-gradient(to top, white, red); /* Added blue gradient */
@@ -92,6 +93,10 @@ body {
   color: transparent;
   cursor: default;
   animation: moveBackground 40s linear infinite;
+  text-shadow: none;
+  font-family: Sofia, Kalnia ,Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  --fa-style-family-classic: "Font Awesome 6 Free";
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
 }
 @keyframes moveBackground {
   0% {
@@ -155,6 +160,19 @@ p {
 }
 #details p strong {
   text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.5);
+}
+
+.map{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.map h2 {
+  color: #000000; /* Text color */
+  font-size: 24px; /* Adjust the font size as needed */
+  cursor: default;
+  text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.8);
 }
 
 

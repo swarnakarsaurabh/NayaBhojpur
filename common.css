@@ -1,4 +1,4 @@
-html{
+html {
   scroll-behavior: smooth;
 }
 ::selection {
@@ -12,6 +12,60 @@ body {
   background: linear-gradient(45deg, red, white);
   box-sizing: border-box;
   overflow: auto; /* Remove default margin and padding and hide overflow */
+  font-family: "Roboto", sans-serif;
+  font-size: 16px; /* Default font size for the body */
+  line-height: 1.6; /* Adjust line height for better readability */
+  /* color: #333; */
+}
+/* Make the font size responsive using media queries */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Style for the <p> element */
+p {
+  margin-bottom: 1.5em; /* Add some spacing between paragraphs */
+  text-align: justify;
+}
+
+/* Styles for h1 and h2 elements */
+h1,
+h2 {
+  font-weight: 700; 
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2em;
+  text-align: center;
+  color: black;
+  text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.8);
+}
+.site-header h1 {
+  margin: 0;
+  font-size: 20vw;
+  background-image: url("./resources/cliptext.jpg");
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  cursor: default;
+  animation: moveBackground 40s linear infinite;
+}
+@keyframes moveBackground {
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+h2 {
+  font-size: 1.5em; /* Adjust font size for h2 */
+  color: black;
+  text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.8);
 }
 
 .container {
@@ -50,12 +104,11 @@ li {
   margin: 0;
 }
 
-
 a {
   text-decoration: none;
   color: #000000;
   font-weight: bold;
-  font-size: 16px;
+  /* font-size: 16px;   29 */
   transition: all 0.3s ease;
 }
 
@@ -64,23 +117,15 @@ a:hover {
   text-decoration: underline;
 }
 
-
-
-
-
-
-
-
-
 /* Responsive styles */
-@media only screen and (max-width: 600px){
- .navbar a {
-    font-size: 12px; 
+@media only screen and (max-width: 600px) {
+  .navbar a {
+    font-size: 12px;  
   }
 }
 
 footer {
-  background-color: #8b0000; 
+  background-color: #8b0000;
   color: white;
   text-align: center;
   padding: 20px;
