@@ -37,6 +37,7 @@ body.dark-mode .container:hover {
 body.dark-mode .navbar a {
   color: white;
 }
+
 body.dark-mode .navbar a:hover {
   color: red;
 }

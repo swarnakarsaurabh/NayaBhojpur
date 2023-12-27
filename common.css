@@ -61,76 +61,17 @@ a:hover {
 
 
 
-.dropdown-navbar{
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  display: none;
-}
-
-.dropdown-navbar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  /* display: flex; */
-  justify-content: flex-start;
-}
 
 
-.dropdown-navbar a {
-  text-decoration: none;
-  color: white;
-  padding: 15px; /* Adjust padding as needed */
-  display: block;
-}
-
-.dropdown-navbar a:hover {
-  background-color:  blue;
-}
-
-/* Style the dropdown content */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: transparent;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-}
-
-.dropdown-content li {
-  display: block;
-  margin: 5px 0; /* Adjust margin as needed */
-}
-
-/* Show the dropdown content on hover */
-.dropdown-navbar:hover .dropdown-content {
-  display: block;
-}
 
 
-@media screen and (max-width: 768px) {
-  .navbar{
-    display: none;
-  }
-}
-@media screen and (max-width: 768px) {
-  .dropdown-navbar{
-    display: block;
-  }
-}
 
 /* Responsive styles */
  
- .dropdown-navbar a {
+ .navbar a {
     font-size: 12px; 
   }
-.dropdown-navbar .dropdown .menu a{
-  font-size: 16px;
-}
+
 footer {
   background-color: #8b0000; 
   color: white;
