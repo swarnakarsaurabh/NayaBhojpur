@@ -86,8 +86,7 @@ body.dark-mode .members-section .member-card p {
 body.dark-mode #no-result-card p {
   color: black;
 }
-body.dark-mode .member-section .member-card {
-}
+
 body.dark-mode #no-results-card {
   background: linear-gradient(grey, rgb(238, 178, 178));
 }
