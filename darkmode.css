@@ -78,6 +78,9 @@ body.dark-mode  h2 {
 body.dark-mode  p {
   color: #fff;
 }
+body.dark-mode .member-card p{
+  color: black;
+}
 
 
 body.dark-mode #details p strong{

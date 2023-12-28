@@ -13,9 +13,9 @@ body {
   box-sizing: border-box;
   overflow: auto; /* Remove default margin and padding and hide overflow */
   font-family: "Roboto", sans-serif;
-  font-size: 16px; /* Default font size for the body */
-  line-height: 1.6; /* Adjust line height for better readability */
-  /* color: #333; */
+  font-size: 16px;
+  line-height: 1.6; 
+
 }
 /* Make the font size responsive using media queries */
 @media only screen and (max-width: 600px) {
