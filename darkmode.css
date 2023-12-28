@@ -76,10 +76,10 @@ body.dark-mode p {
   color: #fff;
 }
 
-body.dark-mode .member-card{
+body.dark-mode .member-section .member-card{
   background: linear-gradient(grey,rgb(238, 178, 178));
 }
-body.dark-mode .member-card p, #no-result-card p {
+body.dark-mode .member-section .member-card p, #no-result-card p {
   color: black;
  
 }
