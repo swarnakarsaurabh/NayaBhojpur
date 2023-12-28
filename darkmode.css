@@ -77,7 +77,7 @@ body.dark-mode p {
 }
 
 body.dark-mode .members-section .member-card {
-  background: linear-gradient(grey, rgb(238, 178, 178));
+  background: linear-gradient(grey, white);
 }
 body.dark-mode .members-section .member-card p {
   color: black;
@@ -88,7 +88,7 @@ body.dark-mode #no-result-card p {
 }
 
 body.dark-mode #no-results-card {
-  background: linear-gradient(grey, rgb(238, 178, 178));
+  background: linear-gradient(grey, white);
 }
 body.dark-mode #no-results-card a {
   color: black;
