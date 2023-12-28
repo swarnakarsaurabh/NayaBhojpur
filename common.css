@@ -14,8 +14,7 @@ body {
   overflow: auto; /* Remove default margin and padding and hide overflow */
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  line-height: 1.6; 
-
+  line-height: 1.6;
 }
 /* Make the font size responsive using media queries */
 @media only screen and (max-width: 600px) {
@@ -33,7 +32,7 @@ p {
 /* Styles for h1 and h2 elements */
 h1,
 h2 {
-  font-weight: 700; 
+  font-weight: 700;
   margin-bottom: 0.5em;
 }
 
@@ -120,7 +119,7 @@ a:hover {
 /* Responsive styles */
 @media only screen and (max-width: 600px) {
   .navbar a {
-    font-size: 12px;  
+    font-size: 12px;
   }
 }
 
@@ -140,4 +139,3 @@ footer {
   margin: 0 10px;
   text-decoration: none;
 }
-

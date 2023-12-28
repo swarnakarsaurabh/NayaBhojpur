@@ -76,15 +76,20 @@ body.dark-mode p {
   color: #fff;
 }
 
-body.dark-mode .member-section .member-card{
-  background: linear-gradient(grey,rgb(238, 178, 178));
+body.dark-mode .members-section .member-card {
+  background: linear-gradient(grey, rgb(238, 178, 178));
 }
-body.dark-mode .member-section .member-card p, #no-result-card p {
+body.dark-mode .members-section .member-card p {
   color: black;
- 
+}
+
+body.dark-mode #no-result-card p {
+  color: black;
+}
+body.dark-mode .member-section .member-card {
 }
 body.dark-mode #no-results-card {
-  background: linear-gradient(grey,rgb(238, 178, 178));
+  background: linear-gradient(grey, rgb(238, 178, 178));
 }
 body.dark-mode #no-results-card a {
   color: black;
