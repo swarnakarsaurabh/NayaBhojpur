@@ -208,7 +208,7 @@
           <input type="text" id="search-first-name" placeholder="First Name" />
           <input type="text" id="search-last-name" placeholder="Last Name" />
           <!-- <input type="text" id="search-locality" placeholder="Search by locality"> -->
-          <button type="button" id="search-button" onclick="searchMembers()">Search</button>
+          <button type="button" id="search-button" onclick="promptForPasscode()">Search</button>
           <!-- View All Button -->
           <button
             type="button"
@@ -376,7 +376,7 @@
 
     <script>
       // Set your desired password
-      var correctPassword = "802133";
+      var correctPassword = "06323";
 
       function promptForPassword() {
         // Prompt the user for a password
@@ -386,6 +386,19 @@
         if (enteredPassword === correctPassword) {
           // Call the function to toggle visibility if the password is correct
           toggleAllMembers();
+        } else {
+          // Inform the user that the password is incorrect
+          alert("Incorrect password. Please try again.");
+        }
+      }
+      function promptForPasscode() {
+        // Prompt the user for a password
+        var enteredPassword = prompt("Please enter the password:");
+
+        // Check if the entered password is correct
+        if (enteredPassword === correctPassword) {
+          // Call the function to toggle visibility if the password is correct
+          searchMembers();
         } else {
           // Inform the user that the password is incorrect
           alert("Incorrect password. Please try again.");
